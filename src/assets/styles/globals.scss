@@ -1,0 +1,23 @@
+@import "./variables.scss";
+@import "./global_classes";
+
+body{
+  @extend .fontFamily_p1;
+  background: $bg-color;
+  color: $color-clean-color;
+}
+
+a{
+  color: $color-clean-color;
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

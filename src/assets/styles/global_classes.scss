@@ -1,0 +1,27 @@
+@import "./variables";
+
+.fontFamily_p1  {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.fontFamily_h1  {
+  font-family: 'Clash Display';
+  color: $color-clean-color;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 150px;
+  line-height: 120%;
+
+}
+.fontFamily_h3  {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 120%;
+
+}

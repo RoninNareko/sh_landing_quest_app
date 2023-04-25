@@ -1,0 +1,72 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/global_classes.scss';
+
+.title{
+  background: $bg-linear2-gradient;
+}
+.navbar_container{
+
+}
+
+.navBar{
+  display: flex;
+  padding-left: 349px;
+  padding-top: 40px;
+  ul{
+    margin-left: 525px;
+    display: flex;
+    li {
+      margin-right: 48px;
+    }
+  }
+}
+.logoContainer{
+max-width: 169px;
+}
+.generalText{
+ @extend .fontFamily_h1
+}
+
+.headerSectionContainer{
+  height: 815px;
+  mix-blend-mode: normal;
+  background-size: cover;
+}
+.sectionOne{
+  display: flex;
+}
+.minidescCont{
+  position: relative;
+  width: 359px;
+  margin-left: 58px;
+  p{
+    position: absolute;
+    bottom: 38px;
+  }
+}
+.btnContainer{
+  width: 292px;
+  margin-right: 24px;
+}
+.SectionTwo{
+  align-items: center;
+  position: relative;
+  display: flex;
+}
+.miniTextContainer{
+  height: 100%;
+  h3{
+    position: absolute;
+    bottom: -30px;
+    right: -7%;
+
+  @extend .fontFamily_h3
+  }
+}
+.contextContainer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top:125px;
+}
