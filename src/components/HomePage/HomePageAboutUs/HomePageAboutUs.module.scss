@@ -1,0 +1,75 @@
+@import "src/assets/styles/global_classes";
+@import "src/assets/styles/variables";
+
+
+.aboutUscontextContainer{
+  height: 500px;
+  margin-top: 56px;
+
+}
+.memberBlock{
+width: 185px;
+
+}
+.sections{
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.textSection{
+  width: 486px;
+  height: 88px;
+}
+
+.mentorsSection{
+  width: 650px;
+  text-align: center;
+  h3{
+    @extend .fontFamily_h3
+  }
+
+}
+
+.teamContainer{
+  width: fit-content;
+  display: flex;
+  gap: 24px;
+  margin-top: 120px;
+}
+
+.imgBorderCnt{
+  position: relative;
+}
+
+.imgBorderCnt:after {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 188px;
+  left: -0.6px;
+  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+  content: "";
+  z-index: -1;
+  border-radius: 119px;
+  height: 190px;
+}
+
+.memberBlockContext{
+
+  h4{
+   @extend .fontFamily_h4;
+
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 4px;
+
+  }
+
+  p{
+    font-size: 14px;
+    text-align: left;
+  }
+}
