@@ -2,74 +2,132 @@
 @import "src/assets/styles/variables";
 
 
-.aboutUscontextContainer{
-  height: 500px;
+.aboutUscontextContainer {
+  //height: 1000px;
   margin-top: 56px;
 
 }
-.memberBlock{
-width: 185px;
 
-}
-.sections{
+.sections {
   display: flex;
   gap: 17px;
-  align-items: center;
+  background-repeat: no-repeat;
   justify-content: center;
+  background-position: 94% 100%; // 1083px 100%
 
 }
 
-.textSection{
+.textSection {
   width: 486px;
   height: 88px;
+  margin-top: 90px;
 }
 
-.mentorsSection{
+.mentorsSection {
   width: 650px;
   text-align: center;
-  h3{
+
+  h3 {
     @extend .fontFamily_h3
   }
 
 }
 
-.teamContainer{
+.teamContainer {
   width: fit-content;
   display: flex;
   gap: 24px;
-  margin-top: 120px;
-}
-
-.imgBorderCnt{
   position: relative;
+  margin-top: 120px;
+  padding-left: 23px;
 }
 
-.imgBorderCnt:after {
+
+.linesBlock {
+
+}
+
+.lineLeft {
+  height: 160px;
+  width: 221px;
+  display: block;
+  background-repeat: no-repeat;
   position: absolute;
-  top: -3px;
-  bottom: -3px;
-  width: 188px;
-  left: -0.6px;
-  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
-  content: "";
-  z-index: -1;
-  border-radius: 119px;
-  height: 190px;
+  left: 127.6px;
 }
 
-.memberBlockContext{
+.lineCenter {
+  height: 160px;
+  width: 221px;
+  display: block;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 323px;
+}
 
-  h4{
-   @extend .fontFamily_h4;
+.lineRight {
+  height: 160px;
+  width: 221px;
+  display: block;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 323.3px;
+}
 
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 4px;
+.linesBlock {
+  margin-top: 10px;
+}
 
-  }
+.whiteStar {
+  @extend .star_background_style;
+  width: 25px;
+  height: 25px;
+  display: block;
+  position: absolute;
+  top: 94px;
+  z-index: 10;
+  left: 8.5px;
+}
 
-  p{
-    font-size: 14px;
-    text-align: left;
+.miniStar {
+  @extend .star_background_style;
+  width: 11.5px;
+  height: 13.15px;
+  display: block;
+  position: absolute;
+  top: 433px;
+  z-index: 10;
+  left: 65.97%;
+}
+
+.midStar {
+  @extend .star_background_style;
+  width: 11.5px;
+  height: 13.15px;
+  display: block;
+  position: absolute;
+  top: 571px;
+  z-index: 10;
+  left: 73%;
+}
+
+.bigStar {
+  @extend .star_background_style;
+  width: 37.26px;
+  height: 42.58px;
+  display: block;
+  position: absolute;
+  top: 641PX;
+
+  left: 83.4%;
+  z-index: 10;
+
+
+  &:before {
+    @extend .starBlur;
+    width: 398px;
+    height: 398px;
+    top: -291px;
+    left: -82px;
   }
 }

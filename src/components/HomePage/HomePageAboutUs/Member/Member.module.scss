@@ -1,0 +1,44 @@
+@import "src/assets/styles/global_classes";
+
+.memberBlock {
+  width: 185px;
+
+}
+
+.memberBlockContext {
+
+  h4 {
+    @extend .fontFamily_h4;
+
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 4px;
+
+  }
+
+  p {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+.imgBorderCnt {
+  position: relative;
+}
+
+.imgBorderCnt:after {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 188px;
+  left: -0.6px;
+  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+  content: "";
+  z-index: -1;
+  border-radius: 119px;
+  height: 190px;
+}
+
+.bottom {
+  padding-top: 50px;
+}
