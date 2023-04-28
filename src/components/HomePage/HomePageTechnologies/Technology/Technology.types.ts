@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 export interface TechnologyType {
-  id: number;
+  id?: number;
   name: string;
-  image: String | StaticImageData;
+  image: string | StaticImageData;
 }

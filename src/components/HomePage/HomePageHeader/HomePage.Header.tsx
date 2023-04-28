@@ -2,17 +2,12 @@ import styles from "./HomePageHeader.module.scss";
 import classNames from "classnames";
 
 import {
-  ABOUTUS_SECTION_STYLE,
   BIG_STAR_BACKGROUND_IMAGE_STYLE,
   HEADER_BUTTON_TEXT,
   HEADER_SECTION_STYLE,
-  STAR_1_STYLE,
-  STAR_2_STYLE,
   STAR_BACKGROUND_IMAGE_STYLE,
-  STAR_DEFAULT_STYLE,
-  STAR_STYLE,
-} from "@/components/HomePage/HomePageHeader/HomePage.Header.constants";
-import PageHeader from "@/components/HomePage/HomePageHeader/PageHeader/PageHeader";
+} from "./HomePage.Header.constants";
+import PageHeader from "./PageHeader/PageHeader";
 import CustomButton from "@/components/common/CustomButton/CustomButton";
 
 export default function HomePageHeader() {
