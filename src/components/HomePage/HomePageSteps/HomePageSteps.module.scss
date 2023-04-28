@@ -18,4 +18,15 @@
 
 .stepsContext {
   height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr;
+
+  div {
+    position: relative;
+  }
 }
+
+
+//STEPS
+
+//STEPS AND

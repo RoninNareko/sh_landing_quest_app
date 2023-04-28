@@ -1,0 +1,58 @@
+@import "src/assets/styles/global_classes";
+@import "src/assets/styles/variables";
+
+.vectorContainer {
+  background-repeat: no-repeat;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 253px;
+  background-position: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.stepsBlock {
+  padding: 24px;
+  padding-right: 43px;
+  width: 475px;
+  height: 191px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    padding: 1px;
+    border-radius: 8px;
+    background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+  }
+
+  h4 {
+    @extend .fontFamily_h4;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    @extend .fontFamily_h3;
+    margin-top: 16px;
+  }
+
+  p {
+    @extend .fontFamily_p1;
+    color: #A2CBFB;
+    margin-top: 16px;
+    max-width: 408px;
+  }
+}
