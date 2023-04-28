@@ -1,0 +1,68 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/global_classes.scss';
+
+
+.headerText {
+  @extend .fontFamily_h2
+}
+
+.headerContainer {
+  background: $bg-header;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 179px;
+}
+
+.subTitle {
+  @extend .fontFamily_p1;
+  margin-top: 16px;
+  max-width: 432px;
+}
+
+.textContainer {
+  max-width: 543px;
+}
+
+.subtextCnt {
+  display: flex;
+  justify-content: center;
+}
+
+.technologiesContainer {
+  margin-top: 54px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+.technologiesListBlock {
+  display: flex;
+  gap: 25px;
+}
+
+.midStar {
+  @extend .star_background_style;
+
+  width: 24.2px;
+  height: 27.66px;
+  display: block;
+  position: absolute;
+  top: 424px;
+  z-index: 10;
+  left: 32%;
+
+  &:before {
+    @extend .starBlur;
+    width: 398px;
+    height: 398px;
+    top: -452px;
+    left: -411px;
+
+  }
+}

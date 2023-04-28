@@ -59,6 +59,7 @@ export default function HomePageAboutUs() {
             {members.map((member: MembersType, idx: number) => {
               return (
                 <Member
+                  key={member.id}
                   name={member.name}
                   description={member.description}
                   bottom={idx === 0 || idx === 2}

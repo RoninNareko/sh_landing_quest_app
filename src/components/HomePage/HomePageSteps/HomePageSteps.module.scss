@@ -1,0 +1,21 @@
+@import "src/assets/styles/global_classes";
+@import "src/assets/styles/variables";
+
+.headerText {
+  @extend .fontFamily_h2
+}
+
+.headerContainer {
+  background: $bg-header;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 179px;
+}
+
+.stepsContext {
+  height: 500px;
+}

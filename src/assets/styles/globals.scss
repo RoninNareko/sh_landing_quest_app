@@ -1,27 +1,31 @@
 @import "./variables.scss";
 @import "./global_classes";
 
-body{
+body {
   @extend .fontFamily_p1;
   background: $bg-color;
   color: $color-clean-color;
 }
 
-a{
+a {
   color: $color-clean-color;
   text-decoration: none;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-section{
+
+section {
   position: relative;
 }
 
+header {
+  position: relative;
+}
