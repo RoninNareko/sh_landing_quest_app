@@ -1,0 +1,44 @@
+@import '@/assets/styles/variables.scss';
+@import '@/assets/styles/global_classes.scss';
+
+
+.questionContainer {
+  width: 703px;
+
+  h4 {
+    @extend .fontFamily_h4;
+
+  }
+
+  p {
+    @extend .fontFamily_p1;
+  }
+}
+
+.close {
+  background-size: 100% 100% !important;
+  max-height: 62px !important;
+}
+
+.questionContainer {
+  width: 703px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  overflow: hidden;
+  z-index: 11;
+  justify-content: left;
+  padding: 27.5px;
+  padding-right: 73px;
+  padding-bottom: 42px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 24px;
+}
+
+.openCloseBtn {
+  position: absolute;
+  left: 94%;
+  cursor: pointer;
+}

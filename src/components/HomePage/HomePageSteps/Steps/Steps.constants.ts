@@ -8,3 +8,5 @@ export const STEPS_RIGHT_BACKGROUND_VECTOR_STYLE = {
 export const STEPS_LEFT_BACKGROUND_VECTOR_STYLE = {
   backgroundImage: `url(${stepsVectorLeft.src})`,
 };
+
+export const STEP_IMAGE_ALT = "image";

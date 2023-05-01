@@ -6,8 +6,10 @@ import {
 } from "@/components/HomePage/HomePageSteps/Steps/Steps.constants";
 import { StepsProps } from "@/components/HomePage/HomePageSteps/Steps/Steps.types";
 
-export default function Steps({ position }: StepsProps) {
+export default function Steps({ position, stepData }: StepsProps) {
+  console.log("stepData", stepData);
   const cx = classNames.bind(styles);
+  const { title, subTitle, description } = stepData;
   return (
     <section
       className={cx(styles.vectorContainer, {
@@ -25,16 +27,13 @@ export default function Steps({ position }: StepsProps) {
         })}
       >
         <div>
-          <h4>Step 1</h4>
+          <h4>{title}</h4>
         </div>
         <div>
-          <h4>Introduction to Front-End </h4>
+          <h4>{subTitle}</h4>
         </div>
         <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non
-            semper quis.
-          </p>
+          <p>{description}</p>
         </div>
       </div>
     </section>

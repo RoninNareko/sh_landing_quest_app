@@ -1,7 +1,11 @@
 import styles from "./HomePageSteps.module.scss";
 import classNames from "classnames";
 import Steps from "./Steps/Steps";
-import { STAR_BACKGROUND_IMAGE_STYLE } from "@/components/HomePage/HomePageSteps/HomePageSteps.constants";
+import {
+  STAR_BACKGROUND_IMAGE_STYLE,
+  steps,
+} from "@/components/HomePage/HomePageSteps/HomePageSteps.constants";
+import { StepsType } from "@/components/HomePage/HomePageSteps/HomePageSteps.type";
 
 export default function HomePageSteps() {
   const cx = classNames.bind(styles);
@@ -30,9 +34,11 @@ export default function HomePageSteps() {
           className={cx(styles.midStar3)}
         ></i>
         <section className={cx(styles.stepsContainer)}>
-          <Steps />
-          <Steps />
-          <Steps />
+          {steps.map((step: StepsType) => {
+            if (step.id < 4) {
+              return <Steps key={step.id} position={false} stepData={step} />;
+            }
+          })}
         </section>
         <section className={cx(styles.stepsLineCnt)}>
           <div className={cx(styles.line)}></div>
@@ -46,9 +52,11 @@ export default function HomePageSteps() {
         <section
           className={cx(styles.stepsContainer, styles.stepsContainerBottom)}
         >
-          <Steps position={true} />
-          <Steps position={true} />
-          <Steps position={true} />
+          {steps.map((step: StepsType) => {
+            if (step.id > 3) {
+              return <Steps key={step.id} position={true} stepData={step} />;
+            }
+          })}
         </section>
       </section>
     </>

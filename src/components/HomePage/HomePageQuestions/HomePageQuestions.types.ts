@@ -1,6 +1,5 @@
-export interface StepsType {
+export interface QuestionsType {
   id: number;
   title: string;
-  subTitle: string;
   description: string;
 }
