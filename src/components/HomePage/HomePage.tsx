@@ -5,6 +5,7 @@ import HomePageSteps from "@/components/HomePage/HomePageSteps/HomePageSteps";
 import HomePageQuestions from "@/components/HomePage/HomePageQuestions/HomePageQuestions";
 import HomePageReview from "@/components/HomePage/HomePageReview/HomePageReview";
 import HomePageGallery from "@/components/HomePage/HomePageGallery/HomePageGallery";
+import HomePageContactUs from "@/components/HomePage/HomePageContactUs/HomePageContactUs";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <HomePageQuestions />
       <HomePageReview />
       <HomePageGallery />
+      <HomePageContactUs />
     </div>
   );
 }

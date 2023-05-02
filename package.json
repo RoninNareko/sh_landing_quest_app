@@ -24,6 +24,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "react-hook-form": "^7.43.9",
     "sass": "^1.62.0"
   }
 }

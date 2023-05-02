@@ -118,4 +118,14 @@
   top: 669px;
   z-index: 10;
   left: 55%;
+
+  &:before {
+    @extend .starBlur;
+    width: 398px;
+    height: 398px;
+    top: -18px;
+    left: 311px;
+
+
+  }
 }
