@@ -3,6 +3,7 @@ import HomePageAboutUs from "@/components/HomePage/HomePageAboutUs/HomePageAbout
 import HomePageTechnologies from "@/components/HomePage/HomePageTechnologies/HomePageTechnologies";
 import HomePageSteps from "@/components/HomePage/HomePageSteps/HomePageSteps";
 import HomePageQuestions from "@/components/HomePage/HomePageQuestions/HomePageQuestions";
+import HomePageReview from "@/components/HomePage/HomePageReview/HomePageReview";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <HomePageTechnologies />
       <HomePageSteps />
       <HomePageQuestions />
+      <HomePageReview />
     </div>
   );
 }

@@ -1,0 +1,122 @@
+@import "src/assets/styles/global_classes";
+@import "src/assets/styles/variables";
+
+.headerText {
+  @extend .fontFamily_h2
+}
+
+.headerContainer {
+  background: $bg-header;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 179px;
+}
+
+.reviewContext {
+  .sectionsContainer {
+    min-width: 1224px;
+  }
+
+}
+
+.headerSection {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.headerSectionContext {
+  text-align: center;
+  display: flex;
+
+  p {
+    display: block;
+  }
+
+  & > p:nth-child(1) {
+    @extend .fontFamily_p1;
+    font-size: 24px;
+  }
+
+  & > p:nth-child(2) {
+    @extend .fontFamily_p1;
+  }
+}
+
+.buttonsCnt {
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 26px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.carouselSection {
+  justify-content: center;
+  display: flex;
+}
+
+.textCnt {
+  max-width: 392px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: 17px;
+  margin-right: 23px;
+
+
+  h4 {
+    @extend .fontFamily_h4;
+  }
+
+  p {
+    @extend .fontFamily_p1
+  }
+}
+
+.headerSectionCnt {
+  width: 42.6%;
+
+}
+
+
+.carouselItemsContainer {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.midStar {
+  @extend .star_background_style;
+
+  width: 24.96px;
+  height: 28.52px;
+  display: block;
+  position: absolute;
+  top: 123px;
+  z-index: 10;
+  left: 111%;
+
+
+  &:before {
+    @extend .starBlur;
+
+    width: 398px;
+    height: 398px;
+    top: -65px;
+    left: -213px;
+
+
+  }
+}
