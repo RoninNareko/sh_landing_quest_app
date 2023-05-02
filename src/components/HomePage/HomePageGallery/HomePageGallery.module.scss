@@ -1,0 +1,121 @@
+@import "src/assets/styles/global_classes";
+@import "src/assets/styles/variables";
+
+.headerText {
+  @extend .fontFamily_h2
+}
+
+.headerContainer {
+  background: $bg-header;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 179px;
+  margin-bottom: 46px;
+}
+
+
+.gridContainer {
+  display: grid;
+  grid-template-areas:
+    'left top'
+    'left bottom';
+  grid-template-columns: 300px 1fr;
+  z-index: 20;
+
+  img {
+    border-radius: 16px;
+  }
+}
+
+.left {
+  grid-area: left;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  p {
+    @extend .fontFamily_p1
+  }
+
+}
+
+.top {
+  display: flex;
+  grid-area: top;
+}
+
+.bottom {
+  grid-area: bottom;
+  width: 868px;
+  margin-top: 130px;
+
+  p {
+    @extend .fontFamily_p1
+  }
+}
+
+.gridContainerImages {
+  max-width: 100px;
+  margin-left: 16px;
+
+  img {
+    margin-bottom: 16px;
+  }
+}
+
+.gridContainerParent {
+  display: flex;
+  justify-content: center;
+}
+
+.miniStar {
+  @extend .star_background_style;
+
+  width: 12.31px;
+  height: 14.07px;
+  display: block;
+  position: absolute;
+  top: 707px;
+  z-index: 10;
+  left: 32%;
+
+
+  &:before {
+    @extend .starBlur;
+    width: 398px;
+    height: 398px;
+    top: -437px;
+    left: -296px;
+
+
+  }
+}
+
+.midStar {
+  @extend .star_background_style;
+
+  width: 28.67px;
+  height: 32.76px;
+  display: block;
+  position: absolute;
+  top: 524px;
+  z-index: 10;
+  left: 66%;
+}
+
+.miniStar2 {
+  @extend .star_background_style;
+
+  width: 12.31px;
+  height: 14.07px;
+  display: block;
+  position: absolute;
+  top: 669px;
+  z-index: 10;
+  left: 55%;
+}
