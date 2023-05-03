@@ -4,8 +4,8 @@ import { CustomButtonProps } from "@/components/common/CustomButton/CustomButton
 
 export default function CustomButton({
   value,
-  disabled,
-  type,
+  disabled = false,
+  type = undefined,
 }: CustomButtonProps) {
   const cx = classNames.bind(styles);
   return (
