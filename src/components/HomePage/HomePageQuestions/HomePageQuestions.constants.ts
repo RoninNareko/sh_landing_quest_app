@@ -38,3 +38,5 @@ export const questions: QuestionsType[] = [
 export const STAR_BACKGROUND_IMAGE_STYLE: CSSProperties = {
   backgroundImage: `url(${star9.src})`,
 };
+
+export const IMG_ALT = "error";

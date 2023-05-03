@@ -8,6 +8,7 @@ import {
   STAR_BACKGROUND_IMAGE_STYLE,
 } from "@/components/HomePage/HomePageQuestions/HomePageQuestions.constants";
 import { QuestionsType } from "@/components/HomePage/HomePageQuestions/HomePageQuestions.types";
+import { IMG_ALT } from "./HomePageQuestions.constants";
 
 export default function HomePageQuestions() {
   const cx = classNames.bind(styles);
@@ -30,7 +31,7 @@ export default function HomePageQuestions() {
         <section className={cx(styles.sectionOne)}>
           <p>Do you have any kind of questions? We are here to help.</p>
           <div>
-            <Image src={quesiontImg} alt={quesiontImg.name} />
+            <Image src={quesiontImg} alt={IMG_ALT} />
           </div>
         </section>
         <section>

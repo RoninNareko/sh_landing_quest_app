@@ -53,7 +53,9 @@ export default function HomePageReview() {
                   className={cx(styles.midStar)}
                 ></i>
                 {carouselItems.map((el: CarouselItemsType, idx: number) => {
-                  return <Carouselitem data={el} active={el.id === 1} />;
+                  return (
+                    <Carouselitem key={el.id} data={el} active={el.id === 1} />
+                  );
                 })}
               </section>
             </section>
