@@ -1,3 +1,8 @@
+npm i
+<br/>
+npm run dev
+
+//////////////node
 border-after graidenty sarqem variable obshi +
 
 kay-eri warinignery dzem console um +
