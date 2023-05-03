@@ -1,0 +1,95 @@
+@import "src/assets/styles/global_classes";
+@import "src/assets/styles/variables";
+
+
+.formContainer {
+  width: 493px;
+
+
+}
+
+.contctFmInput {
+  display: flex;
+  padding: 24px;
+  position: relative;
+  text-underline: none;
+  color: $color-text-40-color;
+  width: 493px;
+  height: 70px;
+  border: none;
+  border-radius: 8px;
+  background: $bg-clean-color5;
+
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color-text-40-color;
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color-text-40-color;
+  }
+
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color-text-40-color;
+  }
+
+  &:focus {
+    color: $color-clean-color;
+  }
+
+  /* Clean 5 */
+  /* Inside auto layout */
+}
+
+.contactFormContainer {
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    padding: 1.6px;
+    border-radius: 8px;
+    background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+  }
+}
+
+.contactFormContainerError {
+  &:after {
+    background: $error-color;
+  }
+}
+
+.contctFmInputError {
+  background: rgba(255, 165, 165, 0.2);
+  color: $color-clean-color;
+
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color-clean-color;
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color-clean-color;
+  }
+
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color-clean-color;
+  }
+
+}
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

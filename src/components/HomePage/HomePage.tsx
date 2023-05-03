@@ -6,6 +6,7 @@ import HomePageQuestions from "@/components/HomePage/HomePageQuestions/HomePageQ
 import HomePageReview from "@/components/HomePage/HomePageReview/HomePageReview";
 import HomePageGallery from "@/components/HomePage/HomePageGallery/HomePageGallery";
 import HomePageContactUs from "@/components/HomePage/HomePageContactUs/HomePageContactUs";
+import HomePageFooter from "@/components/HomePage/HomePageFooter/HomePageFooter";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <HomePageReview />
       <HomePageGallery />
       <HomePageContactUs />
+      <HomePageFooter />
     </div>
   );
 }

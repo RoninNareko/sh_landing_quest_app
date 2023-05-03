@@ -1,6 +1,6 @@
 @import "../../../assets/styles/variables";
 
-.cutomButton{
+.cutomButton {
   background: $bg-linear2-gradient;
   border-radius: 8px;
   height: 72px;
@@ -11,7 +11,7 @@
   padding: 24px 32px;
   gap: 10px;
   width: 100%;
-
+  border: none;
   font-family: $base-font-family;
   font-style: normal;
   font-weight: 500;
@@ -19,4 +19,17 @@
 
   color: $bg-primary-100-color;
   cursor: pointer;
+
+  &:hover {
+    color: $bg-primary-80-color;
+  }
+
+  &:active {
+    color: $color-clean-color;
+  }
+
+  &:disabled {
+    color: $bg-primary-100-color;
+    opacity: 0.4;
+  }
 }
