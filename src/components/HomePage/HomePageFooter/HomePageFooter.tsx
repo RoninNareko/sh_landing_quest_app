@@ -6,6 +6,7 @@ import fb from "@/assets/images/social/facebook.svg";
 import lisa from "@/assets/images/social/lisa.svg";
 import tw from "@/assets/images/social/twit.svg";
 import linked from "@/assets/images/social/linkdin.svg";
+import { IMG_ALT } from "@/components/HomePage/HomePageFooter/HomePageFooter.constants";
 
 export default function HomePageFooter() {
   const cx = classNames.bind(styles);
@@ -13,7 +14,7 @@ export default function HomePageFooter() {
     <footer className={cx(styles.footerContainer)}>
       <section>
         <div>
-          <Image src={logo} alt={"sd"} />
+          <Image src={logo} alt={IMG_ALT} />
         </div>
         <div className={cx(styles.descContainer)}>
           <p>Wisconsin Ave, Suite 700 Chevy Chase, Maryland 20815</p>
@@ -23,13 +24,13 @@ export default function HomePageFooter() {
         <ul>
           <li className={cx(styles.navTitle)}>Company</li>
           <li>
-            <a href="">About Us</a>
+            <a href="/">About Us</a>
           </li>
           <li>
-            <a href="#">Carres</a>
+            <a href="/">Carres</a>
           </li>
           <li>
-            <a href="#">FAQs</a>
+            <a href="/">FAQs</a>
           </li>
         </ul>
       </section>
@@ -37,10 +38,10 @@ export default function HomePageFooter() {
         <ul>
           <li className={cx(styles.navTitle)}></li>
           <li>
-            <a href="">Teams</a>
+            <a href="/">Teams</a>
           </li>
           <li>
-            <a href="#">Contact Us</a>
+            <a href="/">Contact Us</a>
           </li>
         </ul>
       </section>
@@ -48,16 +49,16 @@ export default function HomePageFooter() {
         <ul className={cx(styles.socialNavCnt)}>
           <li className={cx(styles.navTitle)}>Social media</li>
           <a href="/">
-            <Image src={fb} alt={"fb"} />
+            <Image src={fb} alt={IMG_ALT} />
           </a>
           <a href="/">
-            <Image src={lisa} alt={"fb"} />
+            <Image src={lisa} alt={IMG_ALT} />
           </a>
           <a href="/">
-            <Image src={tw} alt={"fb"} />
+            <Image src={tw} alt={IMG_ALT} />
           </a>
           <a href="/">
-            <Image src={linked} alt={"fb"} />
+            <Image src={linked} alt={IMG_ALT} />
           </a>
         </ul>
       </section>

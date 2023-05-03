@@ -1,47 +1,29 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import classNames from "classnames";
 import styles from "./ContactForm.module.scss";
 import * as yup from "yup";
 import CustomButton from "@/components/common/CustomButton/CustomButton";
-
-const useYupValidationResolver = (validationSchema) =>
-  useCallback(
-    async (data) => {
-      try {
-        const values = await validationSchema.validate(data, {
-          abortEarly: false,
-        });
-
-        return {
-          values,
-          errors: {},
-        };
-      } catch (errors) {
-        return {
-          values: {},
-          errors: errors.inner.reduce(
-            (allErrors, currentError) => ({
-              ...allErrors,
-              [currentError.path]: {
-                type: currentError.type ?? "validation",
-                message: currentError.message,
-              },
-            }),
-            {}
-          ),
-        };
-      }
-    },
-    [validationSchema]
-  );
+import {
+  buttonText,
+  buttonType,
+  EMAIL_ENTITY_NAME,
+  EMAIL_INPUT_PLACEHOLDER,
+  FORM_MODE,
+  NAME_ENTITY_NAME,
+  NAME_INPUT_PLACEHOLDER,
+  PHONE_ENTITY_NAME,
+  PHONE_INPUT_ERROR_MESSAGE,
+  PHONE_INPUT_PLACEHOLDER,
+} from "@/components/HomePage/HomePageContactUs/ContactForm/ContactForm.constants";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const validationSchema = yup.object({
   phone: yup
     .string()
     .matches(
       /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
-      "Enter a valid phone number"
+      PHONE_INPUT_ERROR_MESSAGE
     ),
   name: yup.string().required(),
   email: yup.string().email().required(),
@@ -55,13 +37,13 @@ export default function App() {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    mode: "onChange",
-    resolver: useYupValidationResolver(validationSchema),
+    mode: FORM_MODE,
+    resolver: yupResolver(validationSchema),
   });
   const onSubmitHandler = (data) => {
     console.log({ data });
   };
-  console.log("errors", errors);
+  const isErrors = Object.keys(errors).length !== 0;
   return (
     <section className={cx(styles.formContainer)}>
       <form onSubmit={handleSubmit(onSubmitHandler)}>
@@ -72,11 +54,10 @@ export default function App() {
         >
           <input
             className={cx(styles.contctFmInput, {
-              [styles.contctFmInputError]: errors.name,
+              [styles.contactFmInputError]: errors.name,
             })}
-            defaultValue={undefined}
-            placeholder="Name"
-            {...register("name")}
+            placeholder={NAME_INPUT_PLACEHOLDER}
+            {...register(NAME_ENTITY_NAME)}
           />
         </div>
 
@@ -95,11 +76,10 @@ export default function App() {
         >
           <input
             className={cx(styles.contctFmInput, {
-              [styles.contctFmInputError]: errors.phone,
+              [styles.contactFmInputError]: errors.phone,
             })}
-            defaultValue={undefined}
-            placeholder="Phone"
-            {...register("phone")}
+            placeholder={PHONE_INPUT_PLACEHOLDER}
+            {...register(PHONE_ENTITY_NAME)}
           />
         </div>
 
@@ -118,11 +98,10 @@ export default function App() {
         >
           <input
             className={cx(styles.contctFmInput, {
-              [styles.contctFmInputError]: errors.email,
+              [styles.contactFmInputError]: errors.email,
             })}
-            defaultValue={undefined}
-            placeholder="E-mail"
-            {...register("email", { required: "This is required." })}
+            placeholder={EMAIL_INPUT_PLACEHOLDER}
+            {...register(EMAIL_ENTITY_NAME)}
           />
         </div>
 
@@ -135,9 +114,9 @@ export default function App() {
         </p>
 
         <CustomButton
-          disabled={Object.keys(errors).length !== 0}
-          type={"submit"}
-          value={"Send"}
+          disabled={isErrors}
+          type={buttonType}
+          value={buttonText}
         />
       </form>
     </section>

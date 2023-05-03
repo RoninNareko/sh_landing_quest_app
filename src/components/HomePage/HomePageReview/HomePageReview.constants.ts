@@ -26,3 +26,5 @@ export const carouselItems: CarouselItemsType[] = [
 export const CORUSELE_IMAGE_STYLE: CSSProperties = {
   backgroundImage: `url(${bg.src})`,
 };
+
+export const IMG_ALT = "error";

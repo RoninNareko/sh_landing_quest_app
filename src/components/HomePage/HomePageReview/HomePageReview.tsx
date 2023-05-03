@@ -6,7 +6,10 @@ import Image from "next/image";
 import Carouselitem from "@/components/HomePage/HomePageReview/Carouselitem/Carouselitem";
 import { carouselItems } from "@/components/HomePage/HomePageReview/HomePageReview.constants";
 import { CarouselItemsType } from "@/components/HomePage/HomePageReview/HomePageReview.types";
-import { STAR_BACKGROUND_IMAGE_STYLE } from "./HomePageReview.constants";
+import {
+  IMG_ALT,
+  STAR_BACKGROUND_IMAGE_STYLE,
+} from "./HomePageReview.constants";
 
 export default function HomePageReview() {
   const cx = classNames.bind(styles);
@@ -37,10 +40,10 @@ export default function HomePageReview() {
                 </div>
                 <div className={cx(styles.buttonsCnt)}>
                   <button>
-                    <Image src={leftArrow} alt={"arrow"} />
+                    <Image src={leftArrow} alt={IMG_ALT} />
                   </button>
                   <button>
-                    <Image src={rightArrow} alt={"arrow"} />
+                    <Image src={rightArrow} alt={IMG_ALT} />
                   </button>
                 </div>
               </section>

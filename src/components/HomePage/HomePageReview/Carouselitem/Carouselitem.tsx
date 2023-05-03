@@ -3,6 +3,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import styles from "./CarouselItem.module.scss";
 import { CarouselItemProps } from "@/components/HomePage/HomePageReview/Carouselitem/Carouselitem.types";
+import { IMG_ALT } from "@/components/HomePage/HomePageReview/Carouselitem/Carouselitem.constants";
 
 export default function Carouselitem({ active, data }: CarouselItemProps) {
   const { image } = data;
@@ -14,7 +15,7 @@ export default function Carouselitem({ active, data }: CarouselItemProps) {
       })}
       style={CORUSELE_IMAGE_STYLE}
     >
-      <Image src={image} alt={"image"} />
+      <Image src={image} alt={IMG_ALT} />
     </div>
   );
 }

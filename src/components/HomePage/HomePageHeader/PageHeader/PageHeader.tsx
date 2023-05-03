@@ -9,7 +9,7 @@ export default function PageHeader() {
   const cx = classNames.bind(styles);
   return (
     <header>
-      <div className={cx(styles.navbar_container)}>
+      <div>
         <nav className={cx(styles.navBar)}>
           <div className={cx(styles.logoContainer)}>
             <Image src={logo} alt={LOGO_IMG_ALT} />

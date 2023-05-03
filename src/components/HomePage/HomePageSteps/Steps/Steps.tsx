@@ -7,7 +7,6 @@ import {
 import { StepsProps } from "@/components/HomePage/HomePageSteps/Steps/Steps.types";
 
 export default function Steps({ position, stepData }: StepsProps) {
-  console.log("stepData", stepData);
   const cx = classNames.bind(styles);
   const { title, subTitle, description } = stepData;
   return (

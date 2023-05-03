@@ -6,6 +6,7 @@ import dev1 from "@/assets/images/dev1.png";
 import dev2 from "@/assets/images/dev2.png";
 import dev3 from "@/assets/images/dev3.png";
 import { STAR_BACKGROUND_IMAGE_STYLE } from "@/components/HomePage/HomePageReview/HomePageReview.constants";
+import { IMG_ALT } from "@/components/HomePage/HomePageGallery/HomePageGallery.constants";
 
 export default function HomePageGallery() {
   const cx = classNames.bind(styles);
@@ -36,15 +37,15 @@ export default function HomePageGallery() {
               your very own Google Chrome extension! In this course we will
               focus on coding exercises and projects.
             </p>
-            <Image src={mask1} alt={"image"} />
+            <Image src={mask1} alt={IMG_ALT} />
           </div>
           <div className={cx(styles.top)}>
             <div>
-              <Image src={dev1} alt={"image"} />
+              <Image src={dev1} alt={IMG_ALT} />
             </div>
             <div className={cx(styles.gridContainerImages)}>
-              <Image src={dev2} alt={"image"} />
-              <Image src={dev3} alt={"image"} />
+              <Image src={dev2} alt={IMG_ALT} />
+              <Image src={dev3} alt={IMG_ALT} />
             </div>
           </div>
           <div className={cx(styles.bottom)}>
