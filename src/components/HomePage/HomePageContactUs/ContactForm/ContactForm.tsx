@@ -37,9 +37,14 @@ const useYupValidationResolver = (validationSchema) =>
   );
 
 const validationSchema = yup.object({
-  phone: yup.number().required("Required"),
-  name: yup.string().required("Required"),
-  email: yup.string().email().required("Required"),
+  phone: yup
+    .string()
+    .matches(
+      /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
+      "Enter a valid phone number"
+    ),
+  name: yup.string().required(),
+  email: yup.string().email().required(),
 });
 
 export default function App() {
@@ -49,7 +54,6 @@ export default function App() {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm({
     mode: "onChange",
     resolver: useYupValidationResolver(validationSchema),
@@ -61,7 +65,6 @@ export default function App() {
   return (
     <section className={cx(styles.formContainer)}>
       <form onSubmit={handleSubmit(onSubmitHandler)}>
-        {/* register your input into the hook by invoking the "register" function */}
         <div
           className={cx(styles.contactFormContainer, {
             [styles.contactFormContainerError]: errors.name,
@@ -77,7 +80,14 @@ export default function App() {
           />
         </div>
 
-        {/* include validation with required or other standard HTML validation rules */}
+        <p
+          className={cx({
+            [styles.errorMessage]: errors.name?.message,
+          })}
+        >
+          {errors.name?.message}
+        </p>
+
         <div
           className={cx(styles.contactFormContainer, {
             [styles.contactFormContainerError]: errors.phone,
@@ -92,6 +102,15 @@ export default function App() {
             {...register("phone")}
           />
         </div>
+
+        <p
+          className={cx({
+            [styles.errorMessage]: errors.phone?.message,
+          })}
+        >
+          {errors.phone?.message}
+        </p>
+
         <div
           className={cx(styles.contactFormContainer, {
             [styles.contactFormContainerError]: errors.email,
@@ -106,6 +125,14 @@ export default function App() {
             {...register("email", { required: "This is required." })}
           />
         </div>
+
+        <p
+          className={cx({
+            [styles.errorMessage]: errors.email?.message,
+          })}
+        >
+          {errors.email?.message}
+        </p>
 
         <CustomButton
           disabled={Object.keys(errors).length !== 0}
