@@ -1,7 +1,7 @@
 import styles from "./Member.module.scss";
 import Image from "next/image";
 import classNames from "classnames";
-import { MemberProps } from "@/components/HomePage/HomePageAboutUs/Member/Member.types";
+import { MemberProps } from "@/components/Member/Member.types";
 
 const cx = classNames.bind(styles);
 

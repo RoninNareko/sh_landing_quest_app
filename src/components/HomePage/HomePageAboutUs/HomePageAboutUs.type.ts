@@ -4,5 +4,5 @@ export type MembersType = {
   id: number;
   name: string;
   description: string;
-  image: String | StaticImageData;
+  image: string | StaticImageData;
 };

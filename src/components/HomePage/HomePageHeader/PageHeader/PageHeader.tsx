@@ -1,12 +1,13 @@
-import styles from "@/components/HomePage/HomePageHeader/HomePageHeader.module.scss";
+import styles from "./PageHeader.module.scss";
 import Image from "next/image";
 import logo from "@/assets/images/logo webtronics 2.svg";
 import { LOGO_IMG_ALT } from "@/components/HomePage/HomePageHeader/HomePage.Header.constants";
 import classNames from "classnames";
-import { UNDEFINED_LINK_URL } from "@/components/HomePage/HomePageHeader/PageHeader/PageHeader.constants";
+import { navLinks } from "@/components/HomePage/HomePageHeader/PageHeader/PageHeader.constants";
 
 export default function PageHeader() {
   const cx = classNames.bind(styles);
+
   return (
     <header>
       <div>
@@ -15,21 +16,13 @@ export default function PageHeader() {
             <Image src={logo} alt={LOGO_IMG_ALT} />
           </div>
           <ul>
-            <li>
-              <a href={UNDEFINED_LINK_URL}>About</a>
-            </li>
-            <li>
-              <a href={UNDEFINED_LINK_URL}>Programs</a>
-            </li>
-            <li>
-              <a href={UNDEFINED_LINK_URL}>Steps</a>
-            </li>
-            <li>
-              <a href={UNDEFINED_LINK_URL}>Questions</a>
-            </li>
-            <li>
-              <a href={UNDEFINED_LINK_URL}>Get in touch</a>
-            </li>
+            {navLinks.map(({ id, href, text }: NavLinksTypes) => {
+              return (
+                <li key={id}>
+                  <a href={href}>{text}</a>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </div>

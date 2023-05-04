@@ -1,0 +1,24 @@
+@import "src/assets/styles/global_classes";
+@import "src/assets/styles/variables";
+
+
+.defaultStar {
+  @extend .star_background_style;
+  width: 37.26px;
+  height: 42.58px;
+  display: block;
+  position: absolute;
+  top: 641PX;
+
+  left: 83.4%;
+  z-index: 10;
+
+
+  &:before {
+    @extend .starBlur;
+    width: 398px;
+    height: 398px;
+    top: -291px;
+    left: -82px;
+  }
+}

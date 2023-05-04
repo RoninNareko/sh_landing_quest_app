@@ -56,14 +56,15 @@
 }
 
 .stepsContainerBottom {
-  margin-top: 147px;
+  margin-top: 155px;
   justify-content: left;
   padding-left: 0px;
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
 
-  flex-direction: row;
+  max-width: fit-content;
+  flex-direction: column;
 }
 
 .circle {
@@ -168,6 +169,3 @@
   height: 15.66px;
 }
 
-//STEPS
-
-//STEPS AND

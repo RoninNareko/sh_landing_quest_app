@@ -4,5 +4,5 @@ export interface MemberProps {
   bottom?: boolean;
   name: string;
   description: string;
-  image: String | StaticImageData;
+  image: string | StaticImageData;
 }

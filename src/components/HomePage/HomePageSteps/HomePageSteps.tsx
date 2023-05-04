@@ -2,13 +2,16 @@ import styles from "./HomePageSteps.module.scss";
 import classNames from "classnames";
 import Steps from "./Steps/Steps";
 import {
-  STAR_BACKGROUND_IMAGE_STYLE,
+  stars,
   steps,
 } from "@/components/HomePage/HomePageSteps/HomePageSteps.constants";
 import { StepsType } from "@/components/HomePage/HomePageSteps/HomePageSteps.type";
+import { StarPropsTypes } from "@/common/Star/Star.types";
+import Star from "@/common/Star/Star";
 
 export default function HomePageSteps() {
   const cx = classNames.bind(styles);
+  const circles = Array(6).fill(null);
   return (
     <>
       <header className={cx(styles.headerContainer)}>
@@ -16,23 +19,17 @@ export default function HomePageSteps() {
           <h2 className={cx(styles.headerText)}>Steps</h2>
         </div>
       </header>
+
       <section className={cx(styles.stepsContext)}>
-        <i
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-          className={cx(styles.midStar)}
-        ></i>
-        <i
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-          className={cx(styles.midStar1)}
-        ></i>
-        <i
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-          className={cx(styles.midStar2)}
-        ></i>
-        <i
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-          className={cx(styles.midStar3)}
-        ></i>
+        {stars.map(({ id, className, backgroundImage }: StarPropsTypes) => {
+          return (
+            <Star
+              key={id}
+              className={className}
+              backgroundImage={backgroundImage}
+            />
+          );
+        })}
         <section className={cx(styles.stepsContainer)}>
           {steps.map((step: StepsType) => {
             if (step.id < 4) {
@@ -42,12 +39,9 @@ export default function HomePageSteps() {
         </section>
         <section className={cx(styles.stepsLineCnt)}>
           <div className={cx(styles.line)}></div>
-          <i className={cx(styles.circle)}></i>
-          <i className={cx(styles.circle)}></i>
-          <i className={cx(styles.circle)}></i>
-          <i className={cx(styles.circle)}></i>
-          <i className={cx(styles.circle)}></i>
-          <i className={cx(styles.circle)}></i>
+          {circles.map((el, idx) => (
+            <i key={idx + 1} className={cx(styles.circle)}></i>
+          ))}
         </section>
         <section
           className={cx(styles.stepsContainer, styles.stepsContainerBottom)}

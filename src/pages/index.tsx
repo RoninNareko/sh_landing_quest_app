@@ -8,7 +8,7 @@ import HomePageGallery from "@/components/HomePage/HomePageGallery/HomePageGalle
 import HomePageContactUs from "@/components/HomePage/HomePageContactUs/HomePageContactUs";
 import HomePageFooter from "@/components/HomePage/HomePageFooter/HomePageFooter";
 
-export default function HomePage() {
+export default function Index() {
   return (
     <div>
       <HomePageHeader />

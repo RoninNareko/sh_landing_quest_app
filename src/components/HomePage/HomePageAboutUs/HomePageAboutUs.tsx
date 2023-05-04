@@ -1,17 +1,17 @@
 import styles from "./HomePageAboutUs.module.scss";
 import classNames from "classnames";
-import Member from "./Member/Member";
+import Member from "../../Member/Member";
 import {
-  BIG_STAR_BACKGROUND_IMAGE_STYLE,
-  LINE_CENTER_BACKGROUND_IMAGE_STYLE,
-  LINE_LEFT_BACKGROUND_IMAGE_STYLE,
-  LINE_RIGHT_BACKGROUND_IMAGE_STYLE,
+  lines,
   members,
   SECTIONS_BACKGROUND_IMAGE_STYLE,
+  starsOne,
   WHITE_STAR_BACKGROUND_IMAGE_STYLE,
 } from "@/components/HomePage/HomePageAboutUs/HomePageAboutUs.constants";
-import { STAR_BACKGROUND_IMAGE_STYLE } from "./HomePageAboutUs.constants";
 import { MembersType } from "@/components/HomePage/HomePageAboutUs/HomePageAboutUs.type";
+import Star from "@/common/Star/Star";
+import { StarPropsTypes } from "@/common/Star/Star.types";
+import Line from "@/components/HomePage/HomePageAboutUs/Line/Line";
 
 export default function HomePageAboutUs() {
   const cx = classNames.bind(styles);
@@ -21,52 +21,48 @@ export default function HomePageAboutUs() {
         className={cx(styles.sections)}
         style={SECTIONS_BACKGROUND_IMAGE_STYLE}
       >
-        <i
-          className={cx([styles.miniStar])}
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-        ></i>
-        <i
-          className={cx([styles.midStar])}
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-        ></i>
-        <i
-          className={cx([styles.bigStar])}
-          style={BIG_STAR_BACKGROUND_IMAGE_STYLE}
-        ></i>
+        {starsOne.map(({ id, className, backgroundImage }: StarPropsTypes) => {
+          return (
+            <Star
+              key={id}
+              className={className}
+              backgroundImage={backgroundImage}
+            />
+          );
+        })}
         <div className={cx(styles.mentorsSection)}>
           <div>
             <h3>Mentors</h3>
           </div>
           <section className={cx(styles.linesBlock)}>
-            <i
-              className={cx(styles.lineLeft)}
-              style={LINE_LEFT_BACKGROUND_IMAGE_STYLE}
-            ></i>
-            <i
-              className={cx(styles.lineCenter)}
-              style={LINE_CENTER_BACKGROUND_IMAGE_STYLE}
-            ></i>
-            <i
-              className={cx(styles.lineRight)}
-              style={LINE_RIGHT_BACKGROUND_IMAGE_STYLE}
-            ></i>
-          </section>
-          <div className={cx(styles.teamContainer)}>
-            <i
-              className={cx([styles.whiteStar])}
-              style={WHITE_STAR_BACKGROUND_IMAGE_STYLE}
-            ></i>
-            {members.map((member: MembersType, idx: number) => {
+            {lines.map(({ id, className, backgroundImage }: StarPropsTypes) => {
               return (
-                <Member
-                  key={member.id}
-                  name={member.name}
-                  description={member.description}
-                  bottom={idx === 0 || idx === 2}
-                  image={member.image}
+                <Line
+                  key={id}
+                  className={className}
+                  backgroundImage={backgroundImage}
                 />
               );
             })}
+          </section>
+          <div className={cx(styles.teamContainer)}>
+            <Star
+              className={cx([styles.whiteStar])}
+              backgroundImage={WHITE_STAR_BACKGROUND_IMAGE_STYLE}
+            />
+            {members.map(
+              ({ id, name, description, image }: MembersType, idx: number) => {
+                return (
+                  <Member
+                    key={id}
+                    name={name}
+                    description={description}
+                    bottom={idx === 0 || idx === 2}
+                    image={image}
+                  />
+                );
+              }
+            )}
           </div>
         </div>
         <div className={cx(styles.textSection)}>

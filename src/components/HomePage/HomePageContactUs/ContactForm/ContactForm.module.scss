@@ -1,85 +1,8 @@
-@import "src/assets/styles/global_classes";
-@import "src/assets/styles/variables";
-
 
 .formContainer {
   width: 493px;
-
-
 }
 
-.contctFmInput {
-  display: flex;
-  padding: 24px;
-  position: relative;
-  text-underline: none;
-  color: $color-text-40-color;
-  width: 493px;
-  height: 70px;
-  border: none;
-  border-radius: 8px;
-  background: $bg-clean-color5;
-
-  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $color-text-40-color;
-    opacity: 1; /* Firefox */
-  }
-
-  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $color-text-40-color;
-  }
-
-  &::-ms-input-placeholder { /* Microsoft Edge */
-    color: $color-text-40-color;
-  }
-
-  &:focus {
-    color: $color-clean-color;
-  }
-
-  /* Clean 5 */
-  /* Inside auto layout */
-}
-
-.contactFormContainer {
-  margin-bottom: 20px;
-  position: relative;
-  overflow: hidden;
-
-  &:after {
-    @extend .gradientBorder;
-    z-index: 0;
-    padding: 1.6px;
-    border-radius: 8px;
-
-
-  }
-}
-
-.contactFormContainerError {
-  &:after {
-    background: $error-color;
-  }
-}
-
-.contactFmInputError {
-  background: rgba(255, 165, 165, 0.2);
-  color: $color-clean-color;
-
-  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $color-clean-color;
-    opacity: 1; /* Firefox */
-  }
-
-  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $color-clean-color;
-  }
-
-  &::-ms-input-placeholder { /* Microsoft Edge */
-    color: $color-clean-color;
-  }
-
-}
 
 .contactForm {
   display: flex;
@@ -88,13 +11,3 @@
   flex-wrap: wrap;
 }
 
-.errorMessage {
-  color: #bf1650;
-  position: relative;
-  top: -10px;
-}
-
-.errorMessage::before {
-  display: inline;
-  content: "⚠ ";
-}

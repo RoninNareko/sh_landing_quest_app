@@ -2,13 +2,14 @@ import styles from "./HomePageHeader.module.scss";
 import classNames from "classnames";
 
 import {
-  BIG_STAR_BACKGROUND_IMAGE_STYLE,
   HEADER_BUTTON_TEXT,
   HEADER_SECTION_STYLE,
-  STAR_BACKGROUND_IMAGE_STYLE,
+  stars,
 } from "./HomePage.Header.constants";
 import PageHeader from "./PageHeader/PageHeader";
-import CustomButton from "@/components/common/CustomButton/CustomButton";
+import CustomButton from "@/common/CustomButton/CustomButton";
+import { StarPropsTypes } from "@/common/Star/Star.types";
+import Star from "@/common/Star/Star";
 
 export default function HomePageHeader() {
   const cx = classNames.bind(styles);
@@ -45,22 +46,15 @@ export default function HomePageHeader() {
 
       <header className={cx(styles.headerContainer)}>
         <h2 className={cx(styles.headerText)}>About us</h2>
-        <i
-          className={cx([styles.star_1])}
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-        ></i>
-        <i
-          className={cx([styles.star_2])}
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-        ></i>
-        <i
-          className={cx([styles.star_3])}
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-        ></i>
-        <i
-          className={cx([styles.starBig])}
-          style={BIG_STAR_BACKGROUND_IMAGE_STYLE}
-        ></i>
+        {stars.map(({ id, className, backgroundImage }: StarPropsTypes) => {
+          return (
+            <Star
+              key={id}
+              className={className}
+              backgroundImage={backgroundImage}
+            />
+          );
+        })}
       </header>
     </section>
   );

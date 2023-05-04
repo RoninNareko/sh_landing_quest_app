@@ -6,6 +6,7 @@ import {
 } from "@/components/HomePage/HomePageTechnologies/HomePageTechnologies.constants";
 import Technology from "@/components/HomePage/HomePageTechnologies/Technology/Technology";
 import { TechnologyType } from "@/components/HomePage/HomePageTechnologies/Technology/Technology.types";
+import Star from "@/common/Star/Star";
 
 export default function HomePageTechnologies() {
   const cx = classNames.bind(styles);
@@ -23,10 +24,10 @@ export default function HomePageTechnologies() {
         </div>
       </header>
       <section className={cx(styles.technologiesContainer)}>
-        <i
-          style={STAR_BACKGROUND_IMAGE_STYLE}
+        <Star
+          backgroundImage={STAR_BACKGROUND_IMAGE_STYLE}
           className={cx(styles.midStar)}
-        ></i>
+        />
         <section className={cx(styles.technologiesListBlock)}>
           {technologies.map((technology: TechnologyType) => (
             <Technology
