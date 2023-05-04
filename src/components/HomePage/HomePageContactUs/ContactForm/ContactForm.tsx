@@ -18,6 +18,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "@/components/HomePage/HomePageContactUs/ContactForm/ContactForm.validation";
 import { InputSettingsType } from "@/components/HomePage/HomePageContactUs/ContactForm/CustomInput/CustomInput.types.TS";
 import CustomInput from "@/components/HomePage/HomePageContactUs/ContactForm/CustomInput/CustomInput";
+import axios, { AxiosResponse } from "axios";
+import { FromDataType } from "@/components/HomePage/HomePageContactUs/ContactForm/ContactForm.types";
 
 export default function App() {
   const cx = classNames.bind(styles);
@@ -31,8 +33,19 @@ export default function App() {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmitHandler = (data) => {
-    console.log({ data });
+  const onSubmitHandler = (data: FromDataType) => {
+    const url = "http://localhost:3004/feedback";
+
+    const reqBody = { data };
+
+    axios
+      .post(url, reqBody)
+      .then(function (response: AxiosResponse) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   const isErrors = Object.keys(errors).length !== 0;
