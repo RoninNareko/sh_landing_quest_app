@@ -13,3 +13,5 @@ export const PHONE_ENTITY_NAME = "phone";
 export const FORM_MODE = "onChange";
 
 export const PHONE_INPUT_ERROR_MESSAGE = "Enter a valid phone number";
+
+export const FEEDBACK_API_URL = "http://localhost:3004/feedback";

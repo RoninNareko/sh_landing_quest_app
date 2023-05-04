@@ -8,6 +8,7 @@ import {
   buttonType,
   EMAIL_ENTITY_NAME,
   EMAIL_INPUT_PLACEHOLDER,
+  FEEDBACK_API_URL,
   FORM_MODE,
   NAME_ENTITY_NAME,
   NAME_INPUT_PLACEHOLDER,
@@ -34,10 +35,8 @@ export default function App() {
   });
 
   const onSubmitHandler = (data: FromDataType) => {
-    const url = "http://localhost:3004/feedback";
-
     axios
-      .post(url, { data })
+      .post(FEEDBACK_API_URL, { data })
       .then(function (response: AxiosResponse) {
         console.log(response);
       })

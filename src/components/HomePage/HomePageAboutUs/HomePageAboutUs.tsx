@@ -5,7 +5,7 @@ import {
   lines,
   members,
   SECTIONS_BACKGROUND_IMAGE_STYLE,
-  starsOne,
+  stars,
   WHITE_STAR_BACKGROUND_IMAGE_STYLE,
 } from "@/components/HomePage/HomePageAboutUs/HomePageAboutUs.constants";
 import { MembersType } from "@/components/HomePage/HomePageAboutUs/HomePageAboutUs.type";
@@ -21,7 +21,7 @@ export default function HomePageAboutUs() {
         className={cx(styles.sections)}
         style={SECTIONS_BACKGROUND_IMAGE_STYLE}
       >
-        {starsOne.map(({ id, className, backgroundImage }: StarPropsTypes) => {
+        {stars.map(({ id, className, backgroundImage }: StarPropsTypes) => {
           return (
             <Star
               key={id}

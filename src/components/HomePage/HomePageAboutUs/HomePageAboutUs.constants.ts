@@ -62,7 +62,7 @@ export const SECTIONS_BACKGROUND_IMAGE_STYLE: CSSProperties = {
   backgroundImage: `url(${bg_frontEnd.src})`,
 };
 
-export const starsOne: StarPropsTypes[] = [
+export const stars: StarPropsTypes[] = [
   {
     id: 1,
     className: styles.miniStar,
