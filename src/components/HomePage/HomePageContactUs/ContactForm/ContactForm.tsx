@@ -17,10 +17,10 @@ import {
 } from "@/components/HomePage/HomePageContactUs/ContactForm/ContactForm.constants";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "@/components/HomePage/HomePageContactUs/ContactForm/ContactForm.validation";
-import { InputSettingsType } from "@/components/HomePage/HomePageContactUs/ContactForm/CustomInput/CustomInput.types.TS";
 import CustomInput from "@/components/HomePage/HomePageContactUs/ContactForm/CustomInput/CustomInput";
 import axios, { AxiosError, AxiosResponse } from "axios";
-import { FromDataType } from "@/components/HomePage/HomePageContactUs/ContactForm/ContactForm.types";
+import { FormDataType } from "@/components/HomePage/HomePageContactUs/ContactForm/ContactForm.types";
+import { InputSettingsType } from "@/components/HomePage/HomePageContactUs/ContactForm/CustomInput/CustomInput.types";
 
 export default function App() {
   const cx = classNames.bind(styles);
@@ -29,12 +29,12 @@ export default function App() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<FormDataType>({
     mode: FORM_MODE,
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmitHandler = (data: FromDataType) => {
+  const onSubmitHandler = (data: FormDataType) => {
     axios
       .post(FEEDBACK_API_URL, { data })
       .then(function (response: AxiosResponse) {

@@ -2,6 +2,7 @@ import styles from "./HomePageSteps.module.scss";
 import classNames from "classnames";
 import Steps from "./Steps/Steps";
 import {
+  circles,
   stars,
   steps,
 } from "@/components/HomePage/HomePageSteps/HomePageSteps.constants";
@@ -11,7 +12,7 @@ import Star from "@/common/Star/Star";
 
 export default function HomePageSteps() {
   const cx = classNames.bind(styles);
-  const circles = Array(6).fill(null);
+
   return (
     <>
       <header className={cx(styles.headerContainer)}>

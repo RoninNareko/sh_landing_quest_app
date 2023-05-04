@@ -1,4 +1,4 @@
-export interface FromDataType {
+export interface FormDataType {
   name: string;
   phone: number;
   email: string;

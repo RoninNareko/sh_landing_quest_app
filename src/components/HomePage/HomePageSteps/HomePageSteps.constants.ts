@@ -75,3 +75,4 @@ export const stars: StarPropsTypes[] = [
     backgroundImage: STAR_BACKGROUND_IMAGE_STYLE,
   },
 ];
+export const circles = Array(6).fill(null);

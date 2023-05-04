@@ -1,7 +1,7 @@
 import styles from "./CustomInput.module.scss";
 import React from "react";
 import classNames from "classnames";
-import { InputSettingsType } from "@/components/HomePage/HomePageContactUs/ContactForm/CustomInput/CustomInput.types.TS";
+import { InputSettingsType } from "@/components/HomePage/HomePageContactUs/ContactForm/CustomInput/CustomInput.types";
 
 export default function CustomInput({
   errorValidation,
