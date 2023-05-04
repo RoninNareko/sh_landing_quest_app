@@ -16,6 +16,7 @@ export default function HomePageSteps() {
           <h2 className={cx(styles.headerText)}>Steps</h2>
         </div>
       </header>
+
       <section className={cx(styles.stepsContext)}>
         <i
           style={STAR_BACKGROUND_IMAGE_STYLE}
