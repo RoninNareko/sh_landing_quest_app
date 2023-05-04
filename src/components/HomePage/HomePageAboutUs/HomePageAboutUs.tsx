@@ -1,6 +1,6 @@
 import styles from "./HomePageAboutUs.module.scss";
 import classNames from "classnames";
-import Member from "../../Member/Member";
+import Member from "@/components/HomePage/HomePageAboutUs/Member/Member";
 import {
   lines,
   members,
