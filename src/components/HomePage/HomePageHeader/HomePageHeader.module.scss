@@ -5,25 +5,6 @@
   background: $bg-linear2-gradient;
 }
 
-.navBar {
-  display: flex;
-  padding-left: 349px;
-  padding-top: 40px;
-
-  ul {
-    margin-left: 525px;
-    display: flex;
-
-    li {
-      margin-right: 48px;
-    }
-  }
-}
-
-.logoContainer {
-  max-width: 169px;
-}
-
 .generalText {
   @extend .fontFamily_h1
 }
@@ -145,5 +126,24 @@
 
     top: -235px;
     left: -172px;
+  }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .generalText {
+    font-size: 75px;
+  }
+  .starBig {
+    left: 65.6%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .generalText {
+    font-size: 50px;
+  }
+  .contextContainer {
+    margin-top: 300px;
   }
 }

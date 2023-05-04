@@ -1,4 +1,4 @@
-import styles from "@/components/HomePage/HomePageHeader/HomePageHeader.module.scss";
+import styles from "./PageHeader.module.scss";
 import Image from "next/image";
 import logo from "@/assets/images/logo webtronics 2.svg";
 import { LOGO_IMG_ALT } from "@/components/HomePage/HomePageHeader/HomePage.Header.constants";

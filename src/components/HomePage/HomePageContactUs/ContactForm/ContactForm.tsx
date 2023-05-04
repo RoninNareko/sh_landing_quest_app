@@ -40,9 +40,11 @@ export default function App() {
     mode: FORM_MODE,
     resolver: yupResolver(validationSchema),
   });
+  // @ts-ignore
   const onSubmitHandler = (data) => {
     console.log({ data });
   };
+
   const isErrors = Object.keys(errors).length !== 0;
   return (
     <section className={cx(styles.formContainer)}>
@@ -66,7 +68,7 @@ export default function App() {
             [styles.errorMessage]: errors.name?.message,
           })}
         >
-          {errors.name?.message}
+          {!!errors.name && `${errors.name?.message}`}
         </p>
 
         <div
@@ -88,7 +90,7 @@ export default function App() {
             [styles.errorMessage]: errors.phone?.message,
           })}
         >
-          {errors.phone?.message}
+          {!!errors.phone && `${errors.phone?.message}`}
         </p>
 
         <div
@@ -110,7 +112,7 @@ export default function App() {
             [styles.errorMessage]: errors.email?.message,
           })}
         >
-          {errors.email?.message}
+          {!!errors.email && `${errors.email?.message}`}
         </p>
 
         <CustomButton
