@@ -1,6 +1,8 @@
 import { CSSProperties } from "react";
 import star9 from "@/assets/images/stars/Star9.png";
 import { StepsType } from "@/components/HomePage/HomePageSteps/HomePageSteps.type";
+import styles from "./HomePageSteps.module.scss";
+import { StarPropsTypes } from "@/common/Star/Star.types";
 
 export const STAR_BACKGROUND_IMAGE_STYLE: CSSProperties = {
   backgroundImage: `url(${star9.src})`,
@@ -48,5 +50,28 @@ export const steps: StepsType[] = [
     subTitle: "Introduction to Front-End",
     description:
       "Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.",
+  },
+];
+
+export const stars: StarPropsTypes[] = [
+  {
+    id: 1,
+    className: styles.midStar,
+    backgroundImage: STAR_BACKGROUND_IMAGE_STYLE,
+  },
+  {
+    id: 2,
+    className: styles.midStar1,
+    backgroundImage: STAR_BACKGROUND_IMAGE_STYLE,
+  },
+  {
+    id: 3,
+    className: styles.midStar2,
+    backgroundImage: STAR_BACKGROUND_IMAGE_STYLE,
+  },
+  {
+    id: 4,
+    className: styles.midStar3,
+    backgroundImage: STAR_BACKGROUND_IMAGE_STYLE,
   },
 ];

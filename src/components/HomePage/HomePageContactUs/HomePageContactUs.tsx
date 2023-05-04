@@ -4,6 +4,7 @@ import ContactForm from "@/components/HomePage/HomePageContactUs/ContactForm/Con
 
 export default function HomePageContactUs() {
   const cx = classNames.bind(styles);
+
   return (
     <>
       <section className={cx(styles.contactUsCnt)}>

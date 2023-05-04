@@ -2,14 +2,19 @@ import classNames from "classnames";
 import styles from "./HomePageFooter.module.scss";
 import logo from "@/assets/images/logo webtronics 2.svg";
 import Image from "next/image";
-import fb from "@/assets/images/social/facebook.svg";
-import lisa from "@/assets/images/social/lisa.svg";
-import tw from "@/assets/images/social/twit.svg";
-import linked from "@/assets/images/social/linkdin.svg";
-import { IMG_ALT } from "@/components/HomePage/HomePageFooter/HomePageFooter.constants";
+import {
+  footerLinks,
+  footerSocialLinks,
+  IMG_ALT,
+} from "@/components/HomePage/HomePageFooter/HomePageFooter.constants";
+import {
+  FooterLinksTypes,
+  FooterSocialLinksTypes,
+} from "@/components/HomePage/HomePageFooter/HomePageFooter.types";
 
 export default function HomePageFooter() {
   const cx = classNames.bind(styles);
+
   return (
     <footer className={cx(styles.footerContainer)}>
       <section>
@@ -23,43 +28,41 @@ export default function HomePageFooter() {
       <section className={cx(styles.footerNav)}>
         <ul>
           <li className={cx(styles.navTitle)}>Company</li>
-          <li>
-            <a href="/">About Us</a>
-          </li>
-          <li>
-            <a href="/">Carres</a>
-          </li>
-          <li>
-            <a href="/">FAQs</a>
-          </li>
+          {footerLinks.map(({ id, href, text }: FooterLinksTypes) => {
+            if (id < 4) {
+              return (
+                <li key={id}>
+                  <a href={href}>{text}</a>
+                </li>
+              );
+            }
+          })}
         </ul>
       </section>
       <section className={cx(styles.footerNav)}>
         <ul>
           <li className={cx(styles.navTitle)}></li>
-          <li>
-            <a href="/">Teams</a>
-          </li>
-          <li>
-            <a href="/">Contact Us</a>
-          </li>
+          {footerLinks.map(({ id, href, text }: FooterLinksTypes) => {
+            if (id > 3) {
+              return (
+                <li key={id}>
+                  <a href={href}>{text}</a>
+                </li>
+              );
+            }
+          })}
         </ul>
       </section>
       <section className={cx(styles.footerNav)}>
         <ul className={cx(styles.socialNavCnt)}>
           <li className={cx(styles.navTitle)}>Social media</li>
-          <a href="/">
-            <Image src={fb} alt={IMG_ALT} />
-          </a>
-          <a href="/">
-            <Image src={lisa} alt={IMG_ALT} />
-          </a>
-          <a href="/">
-            <Image src={tw} alt={IMG_ALT} />
-          </a>
-          <a href="/">
-            <Image src={linked} alt={IMG_ALT} />
-          </a>
+          {footerSocialLinks.map(
+            ({ id, href, image }: FooterSocialLinksTypes) => (
+              <a key={id} href={href}>
+                <Image src={image} alt={IMG_ALT} />
+              </a>
+            )
+          )}
         </ul>
       </section>
     </footer>

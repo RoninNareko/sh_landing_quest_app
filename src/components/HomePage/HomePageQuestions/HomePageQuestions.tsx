@@ -9,6 +9,7 @@ import {
 } from "@/components/HomePage/HomePageQuestions/HomePageQuestions.constants";
 import { QuestionsType } from "@/components/HomePage/HomePageQuestions/HomePageQuestions.types";
 import { IMG_ALT } from "./HomePageQuestions.constants";
+import Star from "@/common/Star/Star";
 
 export default function HomePageQuestions() {
   const cx = classNames.bind(styles);
@@ -20,14 +21,14 @@ export default function HomePageQuestions() {
         </div>
       </header>
       <div className={cx(styles.sectionsContainer)}>
-        <i
-          style={STAR_BACKGROUND_IMAGE_STYLE}
+        <Star
+          backgroundImage={STAR_BACKGROUND_IMAGE_STYLE}
           className={cx(styles.midStar)}
-        ></i>
-        <i
-          style={STAR_BACKGROUND_IMAGE_STYLE}
+        />
+        <Star
+          backgroundImage={STAR_BACKGROUND_IMAGE_STYLE}
           className={cx(styles.miniStar)}
-        ></i>
+        />
         <section className={cx(styles.sectionOne)}>
           <p>Do you have any kind of questions? We are here to help.</p>
           <div>

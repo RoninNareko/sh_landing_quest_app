@@ -11,6 +11,9 @@ import star9 from "@/assets/images/stars/Star9.png";
 import star10 from "@/assets/images/stars/Star10.png";
 import bg_frontEnd from "@/assets/images/frbg.png";
 
+import styles from "@/components/HomePage/HomePageAboutUs/HomePageAboutUs.module.scss";
+import { StarPropsTypes } from "@/common/Star/Star.types";
+
 export const LINE_LEFT_BACKGROUND_IMAGE_STYLE = {
   backgroundImage: `url(${leftLine.src})`,
 };
@@ -58,3 +61,39 @@ export const BIG_STAR_BACKGROUND_IMAGE_STYLE: CSSProperties = {
 export const SECTIONS_BACKGROUND_IMAGE_STYLE: CSSProperties = {
   backgroundImage: `url(${bg_frontEnd.src})`,
 };
+
+export const starsOne: StarPropsTypes[] = [
+  {
+    id: 1,
+    className: styles.miniStar,
+    backgroundImage: STAR_BACKGROUND_IMAGE_STYLE,
+  },
+  {
+    id: 2,
+    className: styles.midStar,
+    backgroundImage: STAR_BACKGROUND_IMAGE_STYLE,
+  },
+  {
+    id: 3,
+    className: styles.bigStar,
+    backgroundImage: BIG_STAR_BACKGROUND_IMAGE_STYLE,
+  },
+];
+
+export const lines: StarPropsTypes[] = [
+  {
+    id: 1,
+    className: styles.lineLeft,
+    backgroundImage: LINE_LEFT_BACKGROUND_IMAGE_STYLE,
+  },
+  {
+    id: 2,
+    className: styles.lineCenter,
+    backgroundImage: LINE_CENTER_BACKGROUND_IMAGE_STYLE,
+  },
+  {
+    id: 3,
+    className: styles.lineRight,
+    backgroundImage: LINE_RIGHT_BACKGROUND_IMAGE_STYLE,
+  },
+];

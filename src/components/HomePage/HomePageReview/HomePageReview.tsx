@@ -10,6 +10,7 @@ import {
   IMG_ALT,
   STAR_BACKGROUND_IMAGE_STYLE,
 } from "./HomePageReview.constants";
+import Star from "@/common/Star/Star";
 
 export default function HomePageReview() {
   const cx = classNames.bind(styles);
@@ -48,10 +49,10 @@ export default function HomePageReview() {
                 </div>
               </section>
               <section className={cx(styles.carouselItemsContainer)}>
-                <i
-                  style={STAR_BACKGROUND_IMAGE_STYLE}
+                <Star
+                  backgroundImage={STAR_BACKGROUND_IMAGE_STYLE}
                   className={cx(styles.midStar)}
-                ></i>
+                />
                 {carouselItems.map((el: CarouselItemsType, idx: number) => {
                   return (
                     <Carouselitem key={el.id} data={el} active={el.id === 1} />

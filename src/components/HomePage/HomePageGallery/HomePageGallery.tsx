@@ -5,8 +5,12 @@ import mask1 from "@/assets/images/mask1.png";
 import dev1 from "@/assets/images/dev1.png";
 import dev2 from "@/assets/images/dev2.png";
 import dev3 from "@/assets/images/dev3.png";
-import { STAR_BACKGROUND_IMAGE_STYLE } from "@/components/HomePage/HomePageReview/HomePageReview.constants";
-import { IMG_ALT } from "@/components/HomePage/HomePageGallery/HomePageGallery.constants";
+import {
+  IMG_ALT,
+  stars,
+} from "@/components/HomePage/HomePageGallery/HomePageGallery.constants";
+import { StarPropsTypes } from "@/common/Star/Star.types";
+import Star from "@/common/Star/Star";
 
 export default function HomePageGallery() {
   const cx = classNames.bind(styles);
@@ -18,18 +22,15 @@ export default function HomePageGallery() {
         </div>
       </header>
       <section className={cx(styles.gridContainerParent)}>
-        <i
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-          className={cx(styles.miniStar)}
-        ></i>
-        <i
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-          className={cx(styles.miniStar2)}
-        ></i>
-        <i
-          style={STAR_BACKGROUND_IMAGE_STYLE}
-          className={cx(styles.midStar)}
-        ></i>
+        {stars.map(({ id, className, backgroundImage }: StarPropsTypes) => {
+          return (
+            <Star
+              key={id}
+              className={className}
+              backgroundImage={backgroundImage}
+            />
+          );
+        })}
         <div className={cx(styles.gridContainer)}>
           <div className={cx(styles.left)}>
             <p>
