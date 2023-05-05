@@ -1,12 +1,12 @@
-import Gallery from "@/components/HomePage/Gallery/Gallery";
-import AboutUs from "@/components/HomePage/AboutUs/AboutUs";
-import Technologies from "@/components/HomePage/Technologies/Technologies";
-import Header from "@/components/HomePage/Header/Header";
-import Questions from "@/components/HomePage/Questions/Questions";
-import ContactUs from "@/components/HomePage/ContactUs/ContactUs";
-import Footer from "@/components/HomePage/Footer/Footer";
-import Review from "@/components/HomePage/Review/Review";
-import Steps from "@/components/HomePage/Steps/Steps";
+import Gallery from "@/components/Gallery/Gallery";
+import AboutUs from "@/components/AboutUs/AboutUs";
+import Technologies from "@/components/Technologies/Technologies";
+import Header from "@/components/Header/Header";
+import Questions from "@/components/Questions/Questions";
+import ContactUs from "@/components/ContactUs/ContactUs";
+import Footer from "@/components/Footer/Footer";
+import Review from "@/components/Review/Review";
+import Steps from "@/components/Steps/Steps";
 
 export default function Index() {
   return (
