@@ -1,25 +1,25 @@
-import HomePageHeader from "@/components/HomePage/HomePageHeader/HomePage.Header";
-import HomePageAboutUs from "@/components/HomePage/HomePageAboutUs/HomePageAboutUs";
-import HomePageTechnologies from "@/components/HomePage/HomePageTechnologies/HomePageTechnologies";
-import HomePageSteps from "@/components/HomePage/HomePageSteps/HomePageSteps";
-import HomePageQuestions from "@/components/HomePage/HomePageQuestions/HomePageQuestions";
-import HomePageReview from "@/components/HomePage/HomePageReview/HomePageReview";
-import HomePageGallery from "@/components/HomePage/HomePageGallery/HomePageGallery";
-import HomePageContactUs from "@/components/HomePage/HomePageContactUs/HomePageContactUs";
-import HomePageFooter from "@/components/HomePage/HomePageFooter/HomePageFooter";
+import Gallery from "@/components/HomePage/Gallery/Gallery";
+import AboutUs from "@/components/HomePage/AboutUs/AboutUs";
+import Technologies from "@/components/HomePage/Technologies/Technologies";
+import Header from "@/components/HomePage/Header/Header";
+import Questions from "@/components/HomePage/Questions/Questions";
+import ContactUs from "@/components/HomePage/ContactUs/ContactUs";
+import Footer from "@/components/HomePage/Footer/Footer";
+import Review from "@/components/HomePage/Review/Review";
+import Steps from "@/components/HomePage/Steps/Steps";
 
 export default function Index() {
   return (
     <div>
-      <HomePageHeader />
-      <HomePageAboutUs />
-      <HomePageTechnologies />
-      <HomePageSteps />
-      <HomePageQuestions />
-      <HomePageReview />
-      <HomePageGallery />
-      <HomePageContactUs />
-      <HomePageFooter />
+      <Header />
+      <AboutUs />
+      <Technologies />
+      <Steps />
+      <Questions />
+      <Review />
+      <Gallery />
+      <ContactUs />
+      <Footer />
     </div>
   );
 }
