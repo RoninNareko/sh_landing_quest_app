@@ -11,7 +11,7 @@ import {
 import { MembersType } from "@/components/HomePage/AboutUs/AboutUs.type";
 import Star from "@/common/Star/Star";
 import { StarPropsTypes } from "@/common/Star/Star.types";
-import Line from "@/components/HomePage/AboutUs/Line/Line";
+import Line from "@/components/Line/Line";
 
 export default function AboutUs() {
   const cx = classNames.bind(styles);

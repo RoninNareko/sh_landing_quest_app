@@ -18,7 +18,7 @@ import {
 import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "@/components/HomePage/ContactUs/ContactForm/ContactForm.validation";
 import CustomInput from "@/components/HomePage/ContactUs/ContactForm/CustomInput/CustomInput";
-import axios, { AxiosError, AxiosResponse } from "axios";
+import axios from "axios";
 import { FormDataType } from "@/components/HomePage/ContactUs/ContactForm/ContactForm.types";
 import { InputSettingsType } from "@/components/HomePage/ContactUs/ContactForm/CustomInput/CustomInput.types";
 
@@ -34,15 +34,13 @@ export default function App() {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmitHandler = (data: FormDataType) => {
-    axios
-      .post(FEEDBACK_API_URL, { data })
-      .then(function (response: AxiosResponse) {
-        console.log(response);
-      })
-      .catch(function (error: AxiosError) {
-        console.log(error);
-      });
+  const onSubmitHandler = async (data: FormDataType) => {
+    try {
+      const res = await axios.post(FEEDBACK_API_URL, { data });
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const isErrors = Object.keys(errors).length !== 0;
